@@ -1,2 +1,595 @@
-snippet abtn
-	<a href="{1:#}" class="btn">{2:Text}</a>
+snippet bs:doctype
+	<!DOCTYPE html>
+	<html lang="en">
+		${1}
+	</html>
+
+snippet bs:viewport
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+snippet bs:viewport-nozoom
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+snippet bs:container
+	<div class="container">
+		${1}
+	</div>
+
+snippet bs:container-fluid
+	<div class="container-fluid">
+		${1}
+	</div>
+
+snippet bs:row
+	<div class="row">
+		${1}
+	</div>
+
+snippet bs:col
+	<div class="col-xs-${1:size} col-sm-$1 col-md-$1 col-lg-$1">
+		${2}
+	</div>
+
+snippet bs:p-lead
+	<p class="lead">${1:...}</p>
+
+snippet bs:abbr
+	<abbr title="${1:attribute}">$1</abbr>
+
+snippet bs:abbr-initialism
+	<abbr title="${1:attribute}" class="initialism">$1</abbr>
+
+snippet bs:address
+	<address>
+		<strong>${1: Twitter, Inc.}</strong><br>
+		${2:795 Folsom Ave, Suite 600}<br>
+		${3:San Francisco, CA 94107}<br>
+		<abbr title="Phone">P:</abbr> ${4:(123) 456-7890}
+	</address>
+
+	<address>
+		<strong>${5:Full Name}</strong><br>
+		<a href="mailto:${6:#}">${7:first.last@example.com}</a>
+	</address>
+
+snippet bs:blockquote
+	<blockquote>
+		<p>${1:...}</p>
+	</blockquote>
+
+snippet bs:blockquote-cite
+	<blockquote>
+		<p>${1:...}</p>
+		<footer>${2:Someone famous in} <cite title="${3:Source Title}">${4:Source Title}</cite></footer>
+	</blockquote>
+
+snippet bs:blockquote-cite-r 
+	<blockquote class="blockquote-reverse">
+		<p>${1:...}</p>
+		<footer>${2:Someone famous in} <cite title="${3:Source Title}">$3</cite></footer>
+	</blockquote>
+
+snippet bs:list
+	<ul>
+		<li>${1}</li>
+	</ul>
+
+snippet bs:list-unstyled
+	<ul class="list-unstyled">
+		<li>${1}</li>
+	</ul>
+
+snippet bs:list-inline
+	<ul class="list-inline">
+		<li>${1}</li>
+	</ul>
+
+snippet bs:dl
+	<dl>
+		<dt>${1}</dt>
+		<dd>${2}</dd>
+	</dl>
+
+snippet bs:dl-horizontal
+	<dl>
+		<dt>${1}</dt>
+		<dd>${2}</dd>
+	</dl>
+
+snippet bs:pre-scrollable
+	<pre class="scrollable">${1}</pre>
+
+snippet bs:table
+	<table class="table ${1:table-striped} ${2:table-bordered} ${3:table-hover} ${4:table-condensed} ${5:table-response}">
+		${6}
+	</table>
+
+snippet bs:contextuals
+	.active
+	.success
+	.info
+	.warning
+	.danger
+	.text-muted
+	.text-primary
+	.text-success
+	.text-info
+	.text-warning
+	.text-danger
+	.bg-primary
+	.bg-success
+	.bg-info
+	.bg-warning
+	.bg-danger
+
+snippet bs:form 
+	<form role="form">
+		<div class="form-group">
+			<label for="${1:id}">${2:Label Title}</label>
+			<input type="${3}" class="form-control" id="$1" placeholder="$2">
+		</div>
+		<button type="submit" class="btn btn-default">${4:Submit}</button>	
+	</form>
+
+snippet bs:form-inline
+	<form role="form" class="form-inline">
+		<div class="form-group">
+			<label class="sr-only" for="${1:id}">${2:Label Title}</label>
+			<input type="${3}" class="form-control" id="$1" placeholder="$2">
+		</div>
+		<button type="submit" class="btn btn-default">${4:Submit}</button>
+	</form>
+
+snippet bs:form-horizontal
+	<form role="form form-horizontal">
+		<div class="form-group">
+			<label for="${1:id}" class="col-sm-${2:2} control-label">${3:Label Title}</label>
+			<div class="col-sm-${4:10}">
+				<input type="${5}" class="form-control" id="$1" placeholder="$3">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-$2 col-sm-$4">
+				<button type="submit" class="btn btn-default">Submit</button>
+			</div>
+		</div>
+	</form>
+
+snippet bs:form-group
+	<div class="form-group">
+		${1}
+	</div>
+
+snippet bs:input
+	<input type="text" class="form-control" name="${1}" value="${2}" placeholder="$1">
+
+snippet bs:textarea
+	<textarea class="form-control" name="${1}" rows="${2}" cols="${3}">${4}</textarea>
+
+snippet bs:checkbox
+	<div class="checkbox">
+		<label>
+			<input type="checkbox" value="${1}">
+			${2:Option One}
+		</label>
+	</div>
+
+snippet bs:checkbox-inline
+	<label class="checkbox-inline">
+		<input type="checkbox" value="${1}"> ${2:Option One}
+	</label>
+
+snippet bs:radio
+	<div class="radio">
+		<label>
+			<input type="radio" name="${1:name}" value="${2}" ${3:checked}>
+			${4:Option One}
+		</label>
+	</div>
+
+snippet bs:radio-inline
+	<label class="radio-inline">
+		<input type="radio" value="${1}"> ${2:checked}
+	</label>
+
+snippet bs:select
+	<select class="form-control" name="${1}">
+		<option>${2}</option>
+	</select>
+
+snippet bs:select-multiple
+	<select multiple class="form-control" name="${1}">
+		<option>${2}</option>
+	</select>
+
+snippet bs:validation-states
+	.has-success
+	.has-warning
+	.has-error
+
+snippet bs:icon
+	<span class="glyphicon glyphicon-{$1}"></span>
+
+snippet bs:help
+	<span class="help-block">${1:A block of help text}</span>
+
+snippet bs:btn
+	<button type="button" class="btn btn-${1:bs:btn-types}">${1:Default}</button>
+
+snippet bs:btn-block
+	<button type="button" class="btn btn-block btn-${1:bs:btn-types}">${1:Default}</button>
+
+snippet bs:btn-types
+	btn-default
+	btn-primary
+	btn-success
+	btn-info
+	btn-warning
+	btn-danger
+	btn-link
+	btn-lg
+	btn-sm
+	btn-xs
+	btn-block
+
+snippet bs:abtn
+	<a href="{1:#}" class="btn btn-${2:bs:btn-types}">${1:Default}</button>
+
+snippet bs:img
+	<img src="${1:#}" class="${2:img-responsive,img-rounded,img-circle,img-thumbnail}" alt="${3:Responsive image}">
+
+snippet bs:btn-close
+	<button type="button" class="close" aria-hidden="true">&times;</button>
+
+snippet bs:caret
+	<span class="caret"></span>
+
+snippet bs:floats
+	.pull-left
+	.pull-right
+
+snippet bs:center-block
+	<div class="center-block">${1}</div>
+
+snippet bs:clearfix
+	<div class="clearfix"></div>
+
+snippet bs:div-show
+	<div class="show">${1}</div>
+
+snippet bs:div-hidden
+	<div class="hidden">${1}</div>
+
+snippet bs:dropdown
+	<div class="dropdown">
+	  <button class="btn dropdown-toggle sr-only" type="button" id="dropdownMenu1" data-toggle="dropdown">
+		Dropdown
+		<span class="caret"></span>
+	  </button>
+	  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+		<li role="presentation" class="divider"></li>
+		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+	  </ul>
+	</div>
+
+snippet bs:dropdown-headers
+	<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+	  <li role="presentation" class="dropdown-header">Dropdown header</li>
+	  ...
+	  <li role="presentation" class="divider"></li>
+	  <li role="presentation" class="dropdown-header">Dropdown header</li>
+	  ...
+	</ul>
+
+snippet bs:btn-group
+	<div class="btn-group">
+	  <button type="button" class="btn btn-default">Left</button>
+	  <button type="button" class="btn btn-default">Middle</button>
+	  <button type="button" class="btn btn-default">Right</button>
+	</div>
+
+snippet bs:btn-toolbar
+	<div class="btn-toolbar" role="toolbar">
+	  <div class="btn-group">...</div>
+	  <div class="btn-group">...</div>
+	  <div class="btn-group">...</div>
+	</div
+
+snippet bs:btn-group-vertical
+	<div class="btn-group-vertical">
+	  ...
+	</div>
+
+snippet bs:btn-dropdown
+	<div class="btn-group">
+	  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		Action <span class="caret"></span>
+	  </button>
+	  <ul class="dropdown-menu" role="menu">
+		<li><a href="#">Action</a></li>
+		<li><a href="#">Another action</a></li>
+		<li><a href="#">Something else here</a></li>
+		<li class="divider"></li>
+		<li><a href="#">Separated link</a></li>
+	  </ul>
+	</div>
+
+snippet bs:btn-split-dropdown
+	<div class="btn-group">
+	  <button type="button" class="btn btn-danger">Action</button>
+	  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+		<span class="caret"></span>
+		<span class="sr-only">Toggle Dropdown</span>
+	  </button>
+	  <ul class="dropdown-menu" role="menu">
+		<li><a href="#">Action</a></li>
+		<li><a href="#">Another action</a></li>
+		<li><a href="#">Something else here</a></li>
+		<li class="divider"></li>
+		<li><a href="#">Separated link</a></li>
+	  </ul>
+	</div>
+
+snippet bs:btn-dropup
+	<div class="btn-group dropup">
+	  <button type="button" class="btn btn-default">Dropup</button>
+	  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		<span class="caret"></span>
+		<span class="sr-only">Toggle Dropdown</span>
+	  </button>
+	  <ul class="dropdown-menu">
+		<!-- Dropdown menu links -->
+	  </ul>
+	</div>
+
+snippet bs:input-group
+	<div class="input-group">
+	  <span class="input-group-addon">@</span>
+	  <input type="text" class="form-control" placeholder="Username">
+	</div>
+
+snippet bs:input-group-button
+	<div class="row">
+	  <div class="col-lg-6">
+		<div class="input-group">
+		  <div class="input-group-btn">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+			  <li><a href="#">Action</a></li>
+			  <li><a href="#">Another action</a></li>
+			  <li><a href="#">Something else here</a></li>
+			  <li class="divider"></li>
+			  <li><a href="#">Separated link</a></li>
+			</ul>
+		  </div><!-- /btn-group -->
+		  <input type="text" class="form-control">
+		</div><!-- /input-group -->
+	  </div><!-- /.col-lg-6 -->
+	  <div class="col-lg-6">
+		<div class="input-group">
+		  <input type="text" class="form-control">
+		  <div class="input-group-btn">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+			<ul class="dropdown-menu pull-right">
+			  <li><a href="#">Action</a></li>
+			  <li><a href="#">Another action</a></li>
+			  <li><a href="#">Something else here</a></li>
+			  <li class="divider"></li>
+			  <li><a href="#">Separated link</a></li>
+			</ul>
+		  </div><!-- /btn-group -->
+		</div><!-- /input-group -->
+	  </div><!-- /.col-lg-6 -->
+	</div><!-- /.row -->
+
+snippet bs:nav-tabs
+	<ul class="nav nav-tabs">
+	  <li class="active"><a href="#">Home</a></li>
+	  <li><a href="#">Profile</a></li>
+	  <li><a href="#">Messages</a></li>
+	</ul>
+
+snippet bs:nav-pills
+	<ul class="nav nav-pills">
+	  <li class="active"><a href="#">Home</a></li>
+	  <li><a href="#">Profile</a></li>
+	  <li><a href="#">Messages</a></li>
+	</ul>
+
+snippet bs:nav-pills-stacked
+	<ul class="nav nav-pills nav-stacked">
+	  <li class="active"><a href="#">Home</a></li>
+	  <li><a href="#">Profile</a></li>
+	  <li><a href="#">Messages</a></li>
+	</ul>
+
+snippet bs:nav-tab-dropdown
+	<ul class="nav nav-tabs">
+	  ...
+	  <li class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+		  Dropdown <span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu">
+		  ...
+		</ul>
+	  </li>
+	  ...
+	</ul>
+
+snippet bs:navbar
+	<nav class="navbar navbar-default" role="navigation">
+	  <div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">Brand</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav">
+			<li class="active"><a href="#">Link</a></li>
+			<li><a href="#">Link</a></li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+			  <ul class="dropdown-menu">
+				<li><a href="#">Action</a></li>
+				<li><a href="#">Another action</a></li>
+				<li><a href="#">Something else here</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Separated link</a></li>
+				<li class="divider"></li>
+				<li><a href="#">One more separated link</a></li>
+			  </ul>
+			</li>
+		  </ul>
+		  <form class="navbar-form navbar-left" role="search">
+			<div class="form-group">
+			  <input type="text" class="form-control" placeholder="Search">
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		  </form>
+		  <ul class="nav navbar-nav navbar-right">
+			<li><a href="#">Link</a></li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+			  <ul class="dropdown-menu">
+				<li><a href="#">Action</a></li>
+				<li><a href="#">Another action</a></li>
+				<li><a href="#">Something else here</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Separated link</a></li>
+			  </ul>
+			</li>
+		  </ul>
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+snippet bs:navbar-form
+	<form class="navbar-form navbar-left" role="search">
+	  <div class="form-group">
+		<input type="text" class="form-control" placeholder="Search">
+	  </div>
+	  <button type="submit" class="btn btn-default">Submit</button>
+	</form>
+
+snippet bs:breadcrumb
+	<ol class="breadcrumb">
+	  <li><a href="#">Home</a></li>
+	  <li><a href="#">Library</a></li>
+	  <li class="active">Data</li>
+	</ol>
+
+snippet bs:pagination
+	<ul class="pagination">
+	  <li><a href="#">&laquo;</a></li>
+	  <li><a href="#">1</a></li>
+	  <li><a href="#">2</a></li>
+	  <li><a href="#">3</a></li>
+	  <li><a href="#">4</a></li>
+	  <li><a href="#">5</a></li>
+	  <li><a href="#">&raquo;</a></li>
+	</ul>
+
+snippet bs:pager
+	<ul class="pager">
+	  <li><a href="#">Previous</a></li>
+	  <li><a href="#">Next</a></li>
+	</ul>
+
+snippet bs:label-badge
+	<span class="label label-${1:default,primary,success,info,warning,danger}">${2:$1}</span>
+
+snippet bs:badge
+	<span class="badge">${1}</span>
+
+snippet bs:jumbotron
+	<div class="jumbotron">
+	  <h1>Hello, world!</h1>
+	  <p>...</p>
+	  <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+	</div>
+
+snippet bs:page-header
+	<div class="page-header">
+	  <h1>Example page header <small>Subtext for header</small></h1>
+	</div>
+
+snippet bs:thumbnails
+	<div class="row">
+	  <div class="col-xs-6 col-md-3">
+		<a href="#" class="thumbnail">
+		  <img data-src="holder.js/100%x180" alt="...">
+		</a>
+	  </div>
+	  ...
+	</div>
+		
+snippet bs:alert
+	<div class="alert alert-${1:success,info,warning,danger,dismissable}">${2:alert text}</div>
+
+snippet bs:progress-bar
+	<div class="progress">
+	  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+		60%
+	  </div>
+	</div>
+
+snippet bs:media-list
+	<ul class="media-list">
+	  <li class="media">
+		<a class="pull-left" href="#">
+		  <img class="media-object" src="..." alt="...">
+		</a>
+		<div class="media-body">
+		  <h4 class="media-heading">Media heading</h4>
+		  ...
+		</div>
+	  </li>
+	</ul>
+
+snippet bs:list-group
+	<ul class="list-group">
+	  <li class="list-group-item">Cras justo odio</li>
+	  <li class="list-group-item">Dapibus ac facilisis in</li>
+	  <li class="list-group-item">Morbi leo risus</li>
+	  <li class="list-group-item">Porta ac consectetur ac</li>
+	  <li class="list-group-item">Vestibulum at eros</li>
+	</ul>
+
+snippet bs:linked-list-group
+	<div class="list-group">
+	  <a href="#" class="list-group-item active">
+		Cras justo odio
+	  </a>
+	  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+	  <a href="#" class="list-group-item">Morbi leo risus</a>
+	  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+	  <a href="#" class="list-group-item">Vestibulum at eros</a>
+	</div>
+
+snippet bs:panel
+	<div class="panel panel-${1:default,success,info,warn,danger}">
+		<div class="panel-heading">
+			<div class="panel-title">${2:Panel title}</div>
+		</div>
+		<div class="panel-body">
+			${3}
+		</div>
+	</div>
+
+snippet bs:well
+	<div class="well">
+		${1:Look, I'm in a well}
+	</div>
+	<div class="panel-body">
