@@ -6,20 +6,20 @@ This repository contains Snipmate snippets for Twitter Bootstrap v3.
 
 Supported Snippet Engines
 -------------------------
-Currently supports Snipmate
+Currently supports [Snipmate](https://github.com/garbas/vim-snipmate)
 
 
 Installation
 ------------
 Use a package manager that supports github repositories.
 
-[Vundle](https://github.com/gmarik/Vundle.vim) Example: 
+[Vundle](https://github.com/gmarik/Vundle.vim) Example:  
 Add `Bundle 'chrisgillis/vim-bootstrap3-snippets'` to your `.vimrc`
 
 
 Bugs
 ----
-These snippets are still a work in progress. Bootstrap components don't aren't fully tab-stopped yet. Feel free to contribute.
+These snippets are mostly done but bootstrap components aren't fully tab-stopped yet. Feel free to contribute.
 
 
 Triggers
