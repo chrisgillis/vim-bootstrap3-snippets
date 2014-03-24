@@ -24,7 +24,6 @@ These snippets are mostly done but bootstrap components aren't fully tab-stopped
 
 Triggers
 --------
-All triggers are prefixed with `bs:`. Example: `bs:doctype`
 
 doctype  
 viewport  
