@@ -6,8 +6,7 @@ This repository contains Snipmate snippets for Twitter Bootstrap v3.
 
 Supported Snippet Engines
 -------------------------
-Currently supports [Snipmate](https://github.com/garbas/vim-snipmate)
-
+Currently supports [Snipmate](https://github.com/garbas/vim-snipmate) and [UltiSnips](https://github.com/SirVer/ultisnips).
 
 Installation
 ------------
