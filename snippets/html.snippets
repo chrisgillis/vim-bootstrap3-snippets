@@ -1,45 +1,45 @@
-snippet bs:doctype
+snippet doctype (bootstrap3)
 	<!DOCTYPE html>
 	<html lang="en">
 		${1}
 	</html>
 
-snippet bs:viewport
+snippet viewport (bootstrap3)
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-snippet bs:viewport-nozoom
+snippet viewport-nozoom (bootstrap3)
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-snippet bs:container
+snippet container (bootstrap3)
 	<div class="container">
 		${1}
 	</div>
 
-snippet bs:container-fluid
+snippet container-fluid (bootstrap3)
 	<div class="container-fluid">
 		${1}
 	</div>
 
-snippet bs:row
+snippet row (bootstrap3)
 	<div class="row">
 		${1}
 	</div>
 
-snippet bs:col
+snippet col (bootstrap3)
 	<div class="col-xs-${1:size} col-sm-$1 col-md-$1 col-lg-$1">
 		${2}
 	</div>
 
-snippet bs:p-lead
+snippet p-lead (bootstrap3)
 	<p class="lead">${1:...}</p>
 
-snippet bs:abbr
+snippet abbr (bootstrap3)
 	<abbr title="${1:attribute}">$1</abbr>
 
-snippet bs:abbr-initialism
+snippet abbr-initialism (bootstrap3)
 	<abbr title="${1:attribute}" class="initialism">$1</abbr>
 
-snippet bs:address
+snippet address (bootstrap3)
 	<address>
 		<strong>${1: Twitter, Inc.}</strong><br>
 		${2:795 Folsom Ave, Suite 600}<br>
@@ -52,59 +52,59 @@ snippet bs:address
 		<a href="mailto:${6:#}">${7:first.last@example.com}</a>
 	</address>
 
-snippet bs:blockquote
+snippet blockquote (bootstrap3)
 	<blockquote>
 		<p>${1:...}</p>
 	</blockquote>
 
-snippet bs:blockquote-cite
+snippet blockquote-cite (bootstrap3)
 	<blockquote>
 		<p>${1:...}</p>
 		<footer>${2:Someone famous in} <cite title="${3:Source Title}">${4:Source Title}</cite></footer>
 	</blockquote>
 
-snippet bs:blockquote-cite-r 
+snippet blockquote-cite-r  (bootstrap3)
 	<blockquote class="blockquote-reverse">
 		<p>${1:...}</p>
 		<footer>${2:Someone famous in} <cite title="${3:Source Title}">$3</cite></footer>
 	</blockquote>
 
-snippet bs:list
+snippet list (bootstrap3)
 	<ul>
 		<li>${1}</li>
 	</ul>
 
-snippet bs:list-unstyled
+snippet list-unstyled (bootstrap3)
 	<ul class="list-unstyled">
 		<li>${1}</li>
 	</ul>
 
-snippet bs:list-inline
+snippet list-inline (bootstrap3)
 	<ul class="list-inline">
 		<li>${1}</li>
 	</ul>
 
-snippet bs:dl
+snippet dl (bootstrap3)
 	<dl>
 		<dt>${1}</dt>
 		<dd>${2}</dd>
 	</dl>
 
-snippet bs:dl-horizontal
+snippet dl-horizontal (bootstrap3)
 	<dl>
 		<dt>${1}</dt>
 		<dd>${2}</dd>
 	</dl>
 
-snippet bs:pre-scrollable
+snippet pre-scrollable (bootstrap3)
 	<pre class="scrollable">${1}</pre>
 
-snippet bs:table
+snippet table (bootstrap3)
 	<table class="table ${1:table-striped} ${2:table-bordered} ${3:table-hover} ${4:table-condensed} ${5:table-response}">
 		${6}
 	</table>
 
-snippet bs:contextuals
+snippet contextuals (bootstrap3)
 	.active
 	.success
 	.info
@@ -122,7 +122,7 @@ snippet bs:contextuals
 	.bg-warning
 	.bg-danger
 
-snippet bs:form 
+snippet form  (bootstrap3)
 	<form role="form">
 		<div class="form-group">
 			<label for="${1:id}">${2:Label Title}</label>
@@ -131,7 +131,7 @@ snippet bs:form
 		<button type="submit" class="btn btn-default">${4:Submit}</button>	
 	</form>
 
-snippet bs:form-inline
+snippet form-inline (bootstrap3)
 	<form role="form" class="form-inline">
 		<div class="form-group">
 			<label class="sr-only" for="${1:id}">${2:Label Title}</label>
@@ -140,7 +140,7 @@ snippet bs:form-inline
 		<button type="submit" class="btn btn-default">${4:Submit}</button>
 	</form>
 
-snippet bs:form-horizontal
+snippet form-horizontal (bootstrap3)
 	<form role="form form-horizontal">
 		<div class="form-group">
 			<label for="${1:id}" class="col-sm-${2:2} control-label">${3:Label Title}</label>
@@ -155,18 +155,18 @@ snippet bs:form-horizontal
 		</div>
 	</form>
 
-snippet bs:form-group
+snippet form-group (bootstrap3)
 	<div class="form-group">
 		${1}
 	</div>
 
-snippet bs:input
+snippet input (bootstrap3)
 	<input type="text" class="form-control" name="${1}" value="${2}" placeholder="$1">
 
-snippet bs:textarea
+snippet textarea (bootstrap3)
 	<textarea class="form-control" name="${1}" rows="${2}" cols="${3}">${4}</textarea>
 
-snippet bs:checkbox
+snippet checkbox (bootstrap3)
 	<div class="checkbox">
 		<label>
 			<input type="checkbox" value="${1}">
@@ -174,12 +174,12 @@ snippet bs:checkbox
 		</label>
 	</div>
 
-snippet bs:checkbox-inline
+snippet checkbox-inline (bootstrap3)
 	<label class="checkbox-inline">
 		<input type="checkbox" value="${1}"> ${2:Option One}
 	</label>
 
-snippet bs:radio
+snippet radio (bootstrap3)
 	<div class="radio">
 		<label>
 			<input type="radio" name="${1:name}" value="${2}" ${3:checked}>
@@ -187,39 +187,39 @@ snippet bs:radio
 		</label>
 	</div>
 
-snippet bs:radio-inline
+snippet radio-inline (bootstrap3)
 	<label class="radio-inline">
 		<input type="radio" value="${1}"> ${2:checked}
 	</label>
 
-snippet bs:select
+snippet select (bootstrap3)
 	<select class="form-control" name="${1}">
 		<option>${2}</option>
 	</select>
 
-snippet bs:select-multiple
+snippet select-multiple (bootstrap3)
 	<select multiple class="form-control" name="${1}">
 		<option>${2}</option>
 	</select>
 
-snippet bs:validation-states
+snippet validation-states (bootstrap3)
 	.has-success
 	.has-warning
 	.has-error
 
-snippet bs:icon
+snippet icon (bootstrap3)
 	<span class="glyphicon glyphicon-{$1}"></span>
 
-snippet bs:help
+snippet help (bootstrap3)
 	<span class="help-block">${1:A block of help text}</span>
 
-snippet bs:btn
-	<button type="button" class="btn btn-${1:bs:btn-types}">${1:Default}</button>
+snippet btn (bootstrap3)
+	<button type="button" class="btn btn-${1:btn-types}">${1:Default}</button>
 
-snippet bs:btn-block
-	<button type="button" class="btn btn-block btn-${1:bs:btn-types}">${1:Default}</button>
+snippet btn-block (bootstrap3)
+	<button type="button" class="btn btn-block btn-${1:btn-types}">${1:Default}</button>
 
-snippet bs:btn-types
+snippet btn-types (bootstrap3)
 	btn-default
 	btn-primary
 	btn-success
@@ -232,35 +232,35 @@ snippet bs:btn-types
 	btn-xs
 	btn-block
 
-snippet bs:abtn
-	<a href="{1:#}" class="btn btn-${2:bs:btn-types}">${1:Default}</button>
+snippet abtn (bootstrap3)
+	<a href="{1:#}" class="btn btn-${2:btn-types}">${1:Default}</button>
 
-snippet bs:img
+snippet img (bootstrap3)
 	<img src="${1:#}" class="${2:img-responsive,img-rounded,img-circle,img-thumbnail}" alt="${3:Responsive image}">
 
-snippet bs:btn-close
+snippet btn-close (bootstrap3)
 	<button type="button" class="close" aria-hidden="true">&times;</button>
 
-snippet bs:caret
+snippet caret (bootstrap3)
 	<span class="caret"></span>
 
-snippet bs:floats
+snippet floats (bootstrap3)
 	.pull-left
 	.pull-right
 
-snippet bs:center-block
+snippet center-block (bootstrap3)
 	<div class="center-block">${1}</div>
 
-snippet bs:clearfix
+snippet clearfix (bootstrap3)
 	<div class="clearfix"></div>
 
-snippet bs:div-show
+snippet div-show (bootstrap3)
 	<div class="show">${1}</div>
 
-snippet bs:div-hidden
+snippet div-hidden (bootstrap3)
 	<div class="hidden">${1}</div>
 
-snippet bs:dropdown
+snippet dropdown (bootstrap3)
 	<div class="dropdown">
 	  <button class="btn dropdown-toggle sr-only" type="button" id="dropdownMenu1" data-toggle="dropdown">
 		Dropdown
@@ -275,7 +275,7 @@ snippet bs:dropdown
 	  </ul>
 	</div>
 
-snippet bs:dropdown-headers
+snippet dropdown-headers (bootstrap3)
 	<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
 	  <li role="presentation" class="dropdown-header">Dropdown header</li>
 	  ...
@@ -284,26 +284,26 @@ snippet bs:dropdown-headers
 	  ...
 	</ul>
 
-snippet bs:btn-group
+snippet btn-group (bootstrap3)
 	<div class="btn-group">
 	  <button type="button" class="btn btn-default">Left</button>
 	  <button type="button" class="btn btn-default">Middle</button>
 	  <button type="button" class="btn btn-default">Right</button>
 	</div>
 
-snippet bs:btn-toolbar
+snippet btn-toolbar (bootstrap3)
 	<div class="btn-toolbar" role="toolbar">
 	  <div class="btn-group">...</div>
 	  <div class="btn-group">...</div>
 	  <div class="btn-group">...</div>
 	</div
 
-snippet bs:btn-group-vertical
+snippet btn-group-vertical (bootstrap3)
 	<div class="btn-group-vertical">
 	  ...
 	</div>
 
-snippet bs:btn-dropdown
+snippet btn-dropdown (bootstrap3)
 	<div class="btn-group">
 	  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 		Action <span class="caret"></span>
@@ -317,7 +317,7 @@ snippet bs:btn-dropdown
 	  </ul>
 	</div>
 
-snippet bs:btn-split-dropdown
+snippet btn-split-dropdown (bootstrap3)
 	<div class="btn-group">
 	  <button type="button" class="btn btn-danger">Action</button>
 	  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
@@ -333,7 +333,7 @@ snippet bs:btn-split-dropdown
 	  </ul>
 	</div>
 
-snippet bs:btn-dropup
+snippet btn-dropup (bootstrap3)
 	<div class="btn-group dropup">
 	  <button type="button" class="btn btn-default">Dropup</button>
 	  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -345,13 +345,13 @@ snippet bs:btn-dropup
 	  </ul>
 	</div>
 
-snippet bs:input-group
+snippet input-group (bootstrap3)
 	<div class="input-group">
 	  <span class="input-group-addon">@</span>
 	  <input type="text" class="form-control" placeholder="Username">
 	</div>
 
-snippet bs:input-group-button
+snippet input-group-button (bootstrap3)
 	<div class="row">
 	  <div class="col-lg-6">
 		<div class="input-group">
@@ -385,28 +385,28 @@ snippet bs:input-group-button
 	  </div><!-- /.col-lg-6 -->
 	</div><!-- /.row -->
 
-snippet bs:nav-tabs
+snippet nav-tabs (bootstrap3)
 	<ul class="nav nav-tabs">
 	  <li class="active"><a href="#">Home</a></li>
 	  <li><a href="#">Profile</a></li>
 	  <li><a href="#">Messages</a></li>
 	</ul>
 
-snippet bs:nav-pills
+snippet nav-pills (bootstrap3)
 	<ul class="nav nav-pills">
 	  <li class="active"><a href="#">Home</a></li>
 	  <li><a href="#">Profile</a></li>
 	  <li><a href="#">Messages</a></li>
 	</ul>
 
-snippet bs:nav-pills-stacked
+snippet nav-pills-stacked (bootstrap3)
 	<ul class="nav nav-pills nav-stacked">
 	  <li class="active"><a href="#">Home</a></li>
 	  <li><a href="#">Profile</a></li>
 	  <li><a href="#">Messages</a></li>
 	</ul>
 
-snippet bs:nav-tab-dropdown
+snippet nav-tab-dropdown (bootstrap3)
 	<ul class="nav nav-tabs">
 	  ...
 	  <li class="dropdown">
@@ -420,7 +420,7 @@ snippet bs:nav-tab-dropdown
 	  ...
 	</ul>
 
-snippet bs:navbar
+snippet navbar (bootstrap3)
 	<nav class="navbar navbar-default" role="navigation">
 	  <div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -475,7 +475,7 @@ snippet bs:navbar
 	  </div><!-- /.container-fluid -->
 	</nav>
 
-snippet bs:navbar-form
+snippet navbar-form (bootstrap3)
 	<form class="navbar-form navbar-left" role="search">
 	  <div class="form-group">
 		<input type="text" class="form-control" placeholder="Search">
@@ -483,14 +483,14 @@ snippet bs:navbar-form
 	  <button type="submit" class="btn btn-default">Submit</button>
 	</form>
 
-snippet bs:breadcrumb
+snippet breadcrumb (bootstrap3)
 	<ol class="breadcrumb">
 	  <li><a href="#">Home</a></li>
 	  <li><a href="#">Library</a></li>
 	  <li class="active">Data</li>
 	</ol>
 
-snippet bs:pagination
+snippet pagination (bootstrap3)
 	<ul class="pagination">
 	  <li><a href="#">&laquo;</a></li>
 	  <li><a href="#">1</a></li>
@@ -501,31 +501,31 @@ snippet bs:pagination
 	  <li><a href="#">&raquo;</a></li>
 	</ul>
 
-snippet bs:pager
+snippet pager (bootstrap3)
 	<ul class="pager">
 	  <li><a href="${1:#}">Previous</a></li>
 	  <li><a href="${2:#}">Next</a></li>
 	</ul>
 
-snippet bs:label-badge
+snippet label-badge (bootstrap3)
 	<span class="label label-${1:default,primary,success,info,warning,danger}">${2:$1}</span>
 
-snippet bs:badge
+snippet badge (bootstrap3)
 	<span class="badge">${1}</span>
 
-snippet bs:jumbotron
+snippet jumbotron (bootstrap3)
 	<div class="jumbotron">
 	  <h1>${1:Hello, World}h1>
 	  <p>${2:...}</p>
 	  <p><a class="btn btn-primary btn-lg" role="button">${3:Learn More}</a></p>
 	</div>
 
-snippet bs:page-header
+snippet page-header (bootstrap3)
 	<div class="page-header">
 	  <h1>${1:Example page header} <small>${2:Subtext for header}</small></h1>
 	</div>
 
-snippet bs:thumbnails
+snippet thumbnails (bootstrap3)
 	<div class="row">
 	  <div class="col-xs-${1:6} col-md-${2:3}">
 		<a href="${3:#}" class="thumbnail">
@@ -534,17 +534,17 @@ snippet bs:thumbnails
 	  </div>
 	</div>
 		
-snippet bs:alert
+snippet alert (bootstrap3)
 	<div class="alert alert-${1:success,info,warning,danger,dismissable}">${2:alert text}</div>
 
-snippet bs:progress-bar
+snippet progress-bar (bootstrap3)
 	<div class="progress">
 	  <div class="progress-bar" role="progressbar" aria-valuenow="${1}" aria-valuemin="${2}" aria-valuemax="${3:100}">
 		${4:60%}	
 	  </div>
 	</div>
 
-snippet bs:media-list
+snippet media-list (bootstrap3)
 	<ul class="media-list">
 	  <li class="media">
 		<a class="pull-left" href="#">
@@ -557,17 +557,17 @@ snippet bs:media-list
 	  </li>
 	</ul>
 
-snippet bs:list-group
+snippet list-group (bootstrap3)
 	<ul class="list-group">
 	  <li class="list-group-item">${1:Item 1}</li>
 	</ul>
 
-snippet bs:linked-list-group
+snippet linked-list-group (bootstrap3)
 	<div class="list-group">
 	  <a href="${1:#}" class="list-group-item">${2:Link 1}</a>
 	</div>
 
-snippet bs:panel
+snippet panel (bootstrap3)
 	<div class="panel panel-${1:default,success,info,warn,danger}">
 		<div class="panel-heading">
 			<div class="panel-title">${2:Panel title}</div>
@@ -577,7 +577,7 @@ snippet bs:panel
 		</div>
 	</div>
 
-snippet bs:well
+snippet well (bootstrap3)
 	<div class="well">
 		${1:Look, I'm in a well}
 	</div>
