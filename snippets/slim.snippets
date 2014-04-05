@@ -1,0 +1,545 @@
+snippet doctype (bootstrap3)
+	doctype html
+	${1}
+
+snippet viewport (bootstrap3)
+	meta name="viewport" content="width=device-width, initial-scale=1"
+
+snippet viewport-nozoom (bootstrap3)
+	meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+
+snippet container (bootstrap3)
+	div.container
+	  ${1}
+
+snippet container-fluid (bootstrap3)
+	div.container-fluid
+	  ${1}
+
+snippet row (bootstrap3)
+	div.row
+	  ${1}
+
+snippet col (bootstrap3)
+	div.col-xs-${1:size} col-sm-$1 col-md-$1 col-lg-$1
+	  ${2}
+
+snippet p-lead (bootstrap3)
+	p.lead${1:...}
+
+snippet abbr (bootstrap3)
+	abbr title="${1:attribute}"$1
+
+snippet abbr-initialism (bootstrap3)
+	abbr.initialism title="${1:attribute}" $1
+
+snippet address (bootstrap3)
+	address
+	  strong ${1: Twitter, Inc.}
+	  br
+	  ${2:795 Folsom Ave, Suite 600}
+	  br
+	  ${3:San Francisco, CA 94107}
+	  br
+	  abbr title="Phone"P: ${4:(123) 456-7890}
+
+	address
+	  strong ${5:Full Name}
+	  br
+	  a href="mailto:${6:#}" ${7:first.last@example.com}
+
+snippet blockquote (bootstrap3)
+	blockquote
+	  p ${1:...}
+
+snippet blockquote-cite (bootstrap3)
+	blockquote
+	  p ${1:...}
+	  footer ${2:Someone famous in}
+	  cite title="${3:Source Title}" ${4:Source Title}
+
+snippet blockquote-cite-r  (bootstrap3)
+	blockquote.blockquote-reverse
+	  p ${1:...}
+	  footer ${2:Someone famous in} 
+	  cite title="${3:Source Title}" $3
+
+snippet list (bootstrap3)
+	ul
+	  li ${1}
+
+snippet list-unstyled (bootstrap3)
+	ul.list-unstyled
+	  li  ${1}
+
+snippet list-inline (bootstrap3)
+	ul.list-inline
+	  li ${1}
+
+snippet dl (bootstrap3)
+	dl
+	  dt ${1}
+	  dd ${2}
+
+snippet dl-horizontal (bootstrap3)
+	dl
+	  dt ${1}
+	  dd ${2}
+
+snippet pre-scrollable (bootstrap3)
+	pre.scrollable ${1}
+
+snippet table (bootstrap3)
+	table.table.${1:table-striped}.${2:table-bordered}.${3:table-hover}.${4:table-condensed}.${5:table-response}
+	  ${6}
+
+snippet contextuals (bootstrap3)
+	.active
+	.success
+	.info
+	.warning
+	.danger
+	.text-muted
+	.text-primary
+	.text-success
+	.text-info
+	.text-warning
+	.text-danger
+	.bg-primary
+	.bg-success
+	.bg-info
+	.bg-warning
+	.bg-danger
+
+snippet form  (bootstrap3)
+	form role="form"
+	  div.form-group
+	    label for="${1:id}"${2:Label Title}
+	  input.form-control type="${3}" id="$1" placeholder="$2"
+	  button.btn.btn-default type="submit" ${4:Submit}
+
+snippet form-inline (bootstrap3)
+	form.form-inline role="form"
+	  div.form-group
+	  	label.sr-only for="${1:id}"${2:Label Title}
+	  	input.form-control type="${3}" id="$1" placeholder="$2"
+	  button.btn.btn-default type="submit" ${4:Submit}
+
+snippet form-horizontal (bootstrap3)
+	form.form-horizontal role="form"
+	  div.form-group
+	  	label.col-sm-${2:2}.control-label for="${1:id}" ${3:Label Title}
+	  	div.col-sm-${4:10}
+	  	  input.form-control type="${5}" id="$1" placeholder="$3"
+	  div.form-group
+	  	div.col-sm-offset-$2.col-sm-$4
+	  	  button.btn.btn-default type="submit" Submit
+
+snippet form-group (bootstrap3)
+	div.form-group
+	  ${1}
+
+snippet input (bootstrap3)
+	input.form-control type="text" name="${1}" value="${2}" placeholder="$1"
+
+snippet textarea (bootstrap3)
+	textarea.form-control name="${1}" rows="${2}" cols="${3}" ${4}
+
+snippet checkbox (bootstrap3)
+	div.checkbox
+	  label
+	  input type="checkbox" value="${1}"
+	    ${2:Option One}
+
+snippet checkbox-inline (bootstrap3)
+	label.checkbox-inline
+	  input type="checkbox" value="${1}" ${2:Option One}
+
+snippet radio (bootstrap3)
+	div.radio
+	  label
+	  input type="radio" name="${1:name}" value="${2}" ${3:checked}
+	  ${4:Option One}
+
+snippet radio-inline (bootstrap3)
+	label.radio-inline
+	  input type="radio" value="${1}" ${2:checked}
+
+snippet select (bootstrap3)
+	select.form-control name="${1}"
+	  option ${2}
+
+snippet select-multiple (bootstrap3)
+	select.form-control multiple name="${1}"
+	  option ${2}
+
+snippet validation-states (bootstrap3)
+	.has-success
+	.has-warning
+	.has-error
+
+snippet icon (bootstrap3)
+	span.glyphicon.glyphicon-{$1}
+
+snippet help (bootstrap3)
+	span.help-block ${1:A block of help text}
+
+snippet btn (bootstrap3)
+	button.btn.btn-${1:btn-types} type="button" ${1:Default}
+
+snippet btn-block (bootstrap3)
+	button.btn.btn-block.btn-${1:btn-types} type="button" ${1:Default}
+
+snippet btn-types (bootstrap3)
+	btn-default
+	btn-primary
+	btn-success
+	btn-info
+	btn-warning
+	btn-danger
+	btn-link
+	btn-lg
+	btn-sm
+	btn-xs
+	btn-block
+
+snippet abtn (bootstrap3)
+	a.btn.btn-${2:btn-types} href="{1:#}" ${1:Default}
+
+snippet img (bootstrap3)
+	img.${2:img-responsive,img-rounded,img-circle,img-thumbnail} src="${1:#}" alt="${3:Responsive image}"
+
+snippet btn-close (bootstrap3)
+	button.close type="button" aria-hidden="true" &times;
+
+snippet caret (bootstrap3)
+	span.caret
+
+snippet floats (bootstrap3)
+	.pull-left
+	.pull-right
+
+snippet center-block (bootstrap3)
+	div.center-block${1}
+
+snippet clearfix (bootstrap3)
+	div.clearfix
+
+snippet div-show (bootstrap3)
+	div.show ${1}
+
+snippet div-hidden (bootstrap3)
+	div.hidden ${1}
+
+snippet dropdown (bootstrap3)
+	div.dropdown
+	button.btn.dropdown-toggle.sr-only type="button" id="dropdownMenu1" data-toggle="dropdown"
+	  Dropdown
+	  span.caret
+	ul.dropdown-menu role="menu" aria-labelledby="dropdownMenu1"
+	  li role="presentation"
+	    a role="menuitem" tabindex="-1" href="#" Action
+	  li role="presentation"
+	    a role="menuitem" tabindex="-1" href="#" Another action
+	  li role="presentation"
+	    a role="menuitem" tabindex="-1" href="#" Something else here
+	  li.divider role="presentation"
+	  li role="presentation"
+	  a role="menuitem" tabindex="-1" href="#" Separated link
+
+snippet dropdown-headers (bootstrap3)
+	ul.dropdown-menu role="menu" aria-labelledby="dropdownMenu2"
+	  li role="presentation" class="dropdown-header" Dropdown header
+	  li.divider role="presentation"
+	  li.dropdown-header role="presentation" header
+
+snippet btn-group (bootstrap3)
+	div.btn-group
+	  button.btn.btn-default type="button" Left
+	  button.btn.btn-default type="button" Middle
+	  button.btn.btn-default type="button" Right
+
+snippet btn-toolbar (bootstrap3)
+	div.btn-toolbar role="toolbar"
+	  div.btn-group ...
+	  div.btn-group ...
+	  div.btn-group ...
+
+snippet btn-group-vertical (bootstrap3)
+	div.btn-group-vertical
+	  ...
+
+snippet btn-dropdown (bootstrap3)
+	div.btn-group
+	  button.btn.btn-default.dropdown-toggle type="button" data-toggle="dropdown"
+		Action
+		span.caret
+	  ul.dropdown-menu role="menu"
+		li
+		  a href="#" Action
+		li
+		  a href="#" Another action
+		li
+		  a href="#" Something else here
+		li.divider
+		li
+		  a href="#" Separated link
+
+snippet btn-split-dropdown (bootstrap3)
+	div.btn-group
+	  button.btn.btn-danger type="button" Action
+	  button.btn.btn-danger.dropdown-toggle type="button" data-toggle="dropdown"
+		span.caret
+		span.sr-onlyToggle Dropdown
+	  ul.dropdown-menu role="menu"
+		li
+		  a href="#" Action
+		li
+		  a href="#" Another action
+		li
+		  a href="#" Something else here
+		li.divider
+		li
+		  a href="#" Separated link
+
+snippet btn-dropup (bootstrap3)
+	div.btn-group.dropup
+	  button.btn.btn-default type="button" Dropup
+	  button.btn.btn-default.dropdown-toggle type="button" data-toggle="dropdown"
+		span.caret
+		span.sr-only Toggle Dropdown
+	  ul.dropdown-menu
+		//<!-- Dropdown menu links -->
+
+snippet input-group (bootstrap3)
+	div.input-group
+	  span.input-group-addon @
+	  input.form-control type="text" placeholder="Username"
+
+snippet input-group-button (bootstrap3)
+	div.row
+	  div.col-lg-6
+		div.input-group
+		  div.input-group-btn
+			button.btn.btn-default.dropdown-toggle type="button" data-toggle="dropdown" Action
+			  span.caret
+			ul.dropdown-menu
+			  li
+			    a href="#" Action
+			  li
+			    a href="#" Action
+			  li
+			    a href="#" Action
+			  li.divider
+			  li
+			    a href="#" Separated link
+		  input.form-control type="text"
+	  div.col-lg-6
+		div.input-group
+		  input.form-control type="text"
+		  div.input-group-btn
+			button.btn.btn-default.dropdown-toggle type="button" data-toggle="dropdown"
+			  Action
+			  span.caret
+			ul.dropdown-menu pull-right
+			  li
+			    a href="#" Action
+			  li
+			    a href="#" Another Action
+			  li
+			    a href="#" Something Else
+			  li.divider
+			  li
+			    a href="#"
+
+snippet nav-tabs (bootstrap3)
+	ul class="nav nav-tabs"
+	  li.active
+	    a href="#" Home
+	  li
+	    a href="#" Profile
+	  li
+	    a href="#" Messages
+
+snippet nav-pills (bootstrap3)
+	ul.nav.nav-pills
+	  li.active
+	    a href="#" Home
+	  li
+	    a href="#" Profile
+	  li
+	    a href="#" Messages
+
+snippet nav-pills-stacked (bootstrap3)
+	ul.nav.nav-pills.nav-stacked
+	  li.active
+	    a href="#" Home
+	  li
+	    a href="#" Profile
+	  li
+	    a href="#" Messages
+
+snippet nav-tab-dropdown (bootstrap3)
+	ul.nav.nav-tabs
+	  li.dropdown
+		a.dropdown-toggle data-toggle="dropdown" href="#"
+		  Dropdown 
+		  span.caret
+		ul.dropdown-menu
+		  li
+		    a href="#" Action
+
+snippet navbar (bootstrap3)
+	nav.navbar.navbar-default role="navigation"
+	  div.container-fluid
+		//<!-- Brand and toggle get grouped for better mobile display -->
+		div.navbar-header
+		  button.navbar-toggle type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+			span.sr-only Toggle navigation
+			span.icon-bar
+			span.icon-bar
+			span.icon-bar
+		  a.navbar-brand href="#" Brand
+
+		//<!-- Collect the nav links, forms, and other content for toggling -->
+		div.collapse.navbar-collapse id="bs-example-navbar-collapse-1"
+		  ul.nav.navbar-nav
+			li.active
+			  a href="#" Link
+			li
+			  a href="#"Link
+			li.dropdown
+			  a.dropdown-toggle href="#" data-toggle="dropdown"Dropdown
+			    b.caret
+			  ul.dropdown-menu
+				li
+				  a href="#" Action
+				li
+				  a href="#" Another Action
+				li
+				  a href="#" Something else here
+				li.divider
+				li
+				  a href="#" Separated link
+				li.divider
+				li
+				  a href="#" One more separated link
+		  form.navbar-form.navbar-left role="search"
+			div.form-group
+			  input.form-control type="text" placeholder="Search"
+			button.btn.btn-default type="submit" Submit
+		  ul.nav.navbar-nav.navbar-right
+			li
+			  a href="#" Link
+			li.dropdown
+			  a.dropdown-toggle href="#" data-toggle="dropdown" Dropdown
+			    b class="caret"
+			  ul.dropdown-menu
+				li
+				  a href="#" Action
+				li
+				  a href="#" Another Action
+				li
+				  a href="#" Something else here
+				li.divider
+				li
+				  a href="#" Separated link
+
+snippet navbar-form (bootstrap3)
+	form.navbar-form.navbar-left role="search"
+	  div.form-group
+		input.form-control type="text" placeholder="Search"
+	  button.btn.ben-default type="submit" Submit
+
+snippet breadcrumb (bootstrap3)
+	ol.breadcrumb
+	  li
+	    a href="#" Home
+	  li
+	    a href="#" Lirbary
+	  li
+	    a.active href="#" Data
+
+snippet pagination (bootstrap3)
+	ul.pagination
+	  li
+	    a href="#" &laquo;
+	  li
+	    a href="#" 1
+	  li
+	    a href="#" 2
+	  li
+	    a href="#" 3
+	  li
+	    a href="#" 4
+	  li
+	    a href="#" 1
+	  li
+	    a href="#" &raquo;
+
+snippet pager (bootstrap3)
+	ul.pager
+	  li
+	    a href="${1:#}" Previous
+	  li
+	    a href="${2:#}" Next
+
+snippet label-badge (bootstrap3)
+	span.label.label-${1:default,primary,success,info,warning,danger}${2:$1}
+
+snippet badge (bootstrap3)
+	span.badge${1}
+
+snippet jumbotron (bootstrap3)
+	div.jumbotron
+	  h1 ${1:Hello, World}
+	  p ${2:...}
+	  p 
+	    a.btn.btn-primary.btn-lg role="button"
+
+snippet page-header (bootstrap3)
+	div.page-header
+	  h1 ${1:Example page header}
+	    small ${2:Subtext for header}
+
+snippet thumbnails (bootstrap3)
+	div.row
+	  div.col-xs-${1:6}.col-md-${2:3}
+		a.thumbnail href="${3:#}"
+		  img data-src="holder.js/100%x180" alt="${4:...}"
+		
+snippet alert (bootstrap3)
+	div.alert.alert-${1:success,info,warning,danger,dismissable}${2:alert text}
+
+snippet progress-bar (bootstrap3)
+	div.progress
+	  div.progress-bar role="progressbar" aria-valuenow="${1}" aria-valuemin="${2}" aria-valuemax="${3:100}"
+		${4:60%}	
+
+snippet media-list (bootstrap3)
+	ul.media-list
+	  li.media
+		a.pull-left href="#"
+		  img.media-object src="..." alt="..."
+		div.media-body
+		  h4.media-heading Media heading
+		  ...
+
+snippet list-group (bootstrap3)
+	ul.list-group
+	  li.list-group-item${1:Item 1}
+
+snippet linked-list-group (bootstrap3)
+	div.list-group
+	  a.list-group-item href="${1:#}" ${2:Link 1}
+
+snippet panel (bootstrap3)
+	div.panel.panel-${1:default,success,info,warn,danger}
+	  div.panel-heading
+	  	div.panel-title ${2:Panel title}
+	  div.panel-body
+	  	${3}
+
+snippet well (bootstrap3)
+	div.well
+	  ${1:Look, I'm in a well}
