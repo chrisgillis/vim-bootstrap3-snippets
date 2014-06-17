@@ -14,25 +14,25 @@ abbr    viewport-nozoom (bootstrap3)
 snippet container
 abbr    container (bootstrap3)
 options word
-	div.container
+	.container
 		${1}
 
 snippet container-fluid
 abbr    container-fluid (bootstrap3)
 options word
-	div.container-fluid
+	.container-fluid
 		${1}
 
 snippet row
 abbr    row (bootstrap3)
 options word
-	div.row
+	.row
 		${1}
 
 snippet col
 abbr    col (bootstrap3)
 options word
-	div.col-xs-${1:size}.col-sm-$1.col-md-$1.col-lg-$1
+	.col-xs-${1:size}.col-sm-$1.col-md-$1.col-lg-$1
 		${2}
 
 snippet p-lead
@@ -158,7 +158,7 @@ snippet form
 abbr    form (bootstrap3)
 options word
 	form(role="form")
-		div.form-group
+		.form-group
 			label(for="${1:id}") ${2:Label Title}
 			input.form-control(type="${3}," id="$1", placeholder="$2")
 		button.btn.btn-default(type="submit") ${4:Submit}
@@ -167,7 +167,7 @@ snippet form-inline
 abbr    form-inline (bootstrap3)
 options word
 	form.form-inline(role="form")
-		div.form-group
+		.form-group
 			label.sr-only(for="${1:id}") ${2:Label Title}
 			input.form-control(type="${3}", id="$1", placeholder="$2")
 		button.btn.btn-default(type="submit") ${4:Submit}
@@ -176,18 +176,18 @@ snippet form-horizontal
 abbr    form-horizontal (bootstrap3)
 options word
 	form.form-horizontal(role="form")
-		div.form-group
+		.form-group
 				label.col-sm-${2:2}.control-label(for="${1:id}") ${3:Label Title}
-				div.col-sm-${4:10}
+				.col-sm-${4:10}
 					input.form-control(type="${5}", id="$1", placeholder="$3")
-		div.form-group
-				div.col-sm-offset-$2.col-sm-$4
+		.form-group
+				.col-sm-offset-$2.col-sm-$4
 					button.btn.btn-default(type="submit") Submit
 
 snippet form-group
 abbr    form-group (bootstrap3)
 options word
-	div.form-group
+	.form-group
 		${1}
 
 snippet input
@@ -203,7 +203,7 @@ options word
 snippet checkbox
 abbr    checkbox (bootstrap3)
 options word
-	div.checkbox
+	.checkbox
 		label
 		input(type="checkbox", value="${1}") ${2:Option One}
 
@@ -216,7 +216,7 @@ options word
 snippet radio
 abbr    radio (bootstrap3)
 options word
-	div.radio
+	.radio
 		label
 		input(type="radio", name="${1:name}", value="${2}", ${3:checked}) ${4:Option One}
 
@@ -319,27 +319,27 @@ options word
 snippet center-block
 abbr    center-block (bootstrap3)
 options word
-	div.center-block ${1}
+	.center-block ${1}
 
 snippet clearfix
 abbr    clearfix (bootstrap3)
 options word
-	div.clearfix
+	.clearfix
 
 snippet div-show
 abbr    div-show (bootstrap3)
 options word
-	div.show ${1}
+	.show ${1}
 
 snippet div-hidden
 abbr    div-hidden (bootstrap3)
 options word
-	div.hidden ${1}
+	.hidden ${1}
 
 snippet dropdown
 abbr    dropdown (bootstrap3)
 options word
-	div.dropdown
+	.dropdown
 	button.btn.dropdown-toggle.sr-only(type="button", id="dropdownMenu1", data-toggle="dropdown")
 		| Dropdown
 		span.caret
@@ -363,7 +363,7 @@ options word
 snippet btn-group
 abbr    btn-group (bootstrap3)
 options word
-	div.btn-group
+	.btn-group
 		// You can also use btn-dropdown and btn-split-dropdown
 		button.btn.btn-default(type="button") Left
 		button.btn.btn-default(type="button") Middle
@@ -371,19 +371,19 @@ options word
 
 snippet btn-toolbar
 abbr    btn-toolbar (bootstrap3)
-	div.btn-toolbar(role="toolbar")
+	.btn-toolbar(role="toolbar")
 		// Use btn-group any times necessary
 
 snippet btn-group-vertical
 abbr    btn-group-vertical (bootstrap3)
 options word
-	div.btn-group-vertical
+	.btn-group-vertical
 		// Use button, btn-dropdown, btn-split-dropdown within this div
 
 snippet btn-dropdown
 abbr    btn-dropdown (bootstrap3)
 options word
-	div.btn-group
+	.btn-group
 		button.btn.btn-default.dropdown-toggle(type="button", data-toggle="dropdown") Action
 			span.caret
 		ul.dropdown-menu role="menu"
@@ -396,7 +396,7 @@ options word
 snippet btn-split-dropdown
 abbr    btn-split-dropdown (bootstrap3)
 options word
-	div.btn-group
+	.btn-group
 		button.btn.btn-danger(type="button") Action
 		button.btn.btn-danger.dropdown-toggle(type="button", data-toggle="dropdown")
 			span.caret
@@ -411,7 +411,7 @@ options word
 snippet btn-dropup
 abbr    btn-dropup (bootstrap3)
 options word
-	div.btn-group.dropup
+	.btn-group.dropup
 		button.btn.btn-default(type="button") Dropup
 		button.btn.btn-default.dropdown-toggle(type="button", data-toggle="dropdown")
 			span.caret
@@ -426,17 +426,17 @@ options word
 snippet input-group
 abbr    input-group (bootstrap3)
 options word
-	div.input-group
+	.input-group
 		span.input-group-addon @
 		input.form-control(type="text", placeholder="Username")
 
 snippet input-group-button
 abbr    input-group-button (bootstrap3)
 options word
-	div.row
-		div.col-lg-6
-			div.input-group
-				div.input-group-btn
+	.row
+		.col-lg-6
+			.input-group
+				.input-group-btn
 					button.btn.btn-default.dropdown-toggle(type="button", data-toggle="dropdown") Action
 						span.caret
 					ul.dropdown-menu
@@ -450,10 +450,10 @@ options word
 						li
 							a(href="#") Separated link
 				input.form-control(type="text")
-		div.col-lg-6
-			div.input-group
+		.col-lg-6
+			.input-group
 				input.form-control(type="text")
-				div.input-group-btn
+				.input-group-btn
 					button.btn.btn-default.dropdown-toggle(type="button", data-toggle="dropdown") Action
 						span.caret
 					ul.dropdown-menu.pull-right
@@ -516,9 +516,9 @@ snippet navbar
 abbr    navbar (bootstrap3)
 options word
 	nav.navbar.navbar-default(role="navigation")
-		div.container
+		.container-fluid
 			// Brand and toggle get grouped for better mobile display
-			div.navbar-header
+			.navbar-header
 				button.navbar-toggle(type="button", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1")
 					span.sr-only Toggle navigation
 					span.icon-bar
@@ -527,7 +527,7 @@ options word
 				a.navbar-brand(href="#") Brand
 
 			// Collect the nav links, forms, and other content for toggling
-			div.collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
+			.collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
 				ul.nav.navbar-nav
 					li.active: a(href="#") Link
 					li: a(href="#") Link
@@ -542,7 +542,7 @@ options word
 							li: a(href="#") Separated link
 							li.divider
 							li: a(href="#") One more separated link
-                // Use navbar-form to get a search component in your bar
+				// Use navbar-form to get a search component in your bar
 				ul.nav.navbar-nav.navbar-right
 					li: a(href="#") Link
 					li.dropdown
@@ -559,7 +559,7 @@ snippet navbar-form
 abbr    navbar-form (bootstrap3)
 options word
 	form.navbar-form.navbar-left(role="search")
-		div.form-group
+		.form-group
 			input.form-control(type="text", placeholder="Search")
 		button.btn.ben-default(type="submit") Submit
 
@@ -606,36 +606,35 @@ options word
 snippet jumbotron
 abbr    jumbotron (bootstrap3)
 options word
-	div.jumbotron
+	.jumbotron
 		h1 ${1:Hello, World}
-		p ${2:...}
-		p
-			a.btn.btn-primary.btn-lg role="button"
+		p ${2:Entry text}
+		p: a.btn.btn-primary.btn-lg(role="button")
 
 snippet page-header
 abbr    page-header (bootstrap3)
-	div.page-header
+	.page-header
 		h1 ${1:Example page header}
 			small ${2:Subtext for header}
 
 snippet thumbnails
 abbr    thumbnails (bootstrap3)
 options word
-	div.row
-		div.col-xs-${1:6}.col-md-${2:3}
+	.row
+		.col-xs-${1:6}.col-md-${2:3}
 			a.thumbnail(href="${3:#}")
 				img(data-src="holder.js/100%x180", alt="${4:...}")
 
 snippet alert
 abbr    alert (bootstrap3)
 options word
-	div.alert.alert-${1:success,info,warning,danger,dismissable} ${2:alert text}
+	.alert.alert-${1:success,info,warning,danger,dismissable} ${2:alert text}
 
 snippet progress-bar
 abbr    progress-bar (bootstrap3)
 options word
-	div.progress
-		div.progress-bar(role="progressbar", aria-valuenow="${1}", aria-valuemin="${2}", aria-valuemax="${3:100}") ${4:60%}
+	.progress
+		.progress-bar(role="progressbar", aria-valuenow="${1}", aria-valuemin="${2}", aria-valuemax="${3:100}") ${4:60%}
 
 snippet media-list
 abbr    media-list (bootstrap3)
@@ -644,7 +643,7 @@ options word
 		li.media
 			a.pull-left(href="${1:#}")
 				img.media-object(src="${2:http://placehold.it/64x64}", alt="${3}")
-			div.media-body
+			.media-body
 				h4.media-heading ${4:Media heading}
 				p Some random content
 
@@ -657,20 +656,20 @@ options word
 snippet linked-list-group
 abbr    linked-list-group (bootstrap3)
 options word
-	div.list-group
+	.list-group
 		a.list-group-item(href="${1:#}") ${2:Link 1}
 
 snippet panel
 abbr    panel (bootstrap3)
 options word
-	div.panel.panel-${1:default,success,info,warn,danger}
-		div.panel-heading
-				div.panel-title ${2:Panel title}
-		div.panel-body
+	.panel.panel-${1:default,success,info,warn,danger}
+		.panel-heading
+				.panel-title ${2:Panel title}
+		.panel-body
 				${3}
 
 snippet well
 abbr    well (bootstrap3)
 options word
-	div.well
+	.well
 		${1:Look, I'm in a well}
