@@ -151,7 +151,7 @@ snippet contextuals (bootstrap3)
 	.bg-warning
 	.bg-danger
 
-snippet form  (bootstrap3)
+snippet form-bs (bootstrap3)
 	<form role="form">
 		<div class="form-group">
 			<label for="${1:id}">${2:Label Title}</label>
@@ -163,7 +163,7 @@ snippet form  (bootstrap3)
 snippet form-inline (bootstrap3)
 	<form role="form" class="form-inline">
 		<div class="form-group">
-			<label class="sr-only" for="${1:id}">${2:Label Title}</label>
+			<label for="${1:id}">${2:Label Title}</label>
 			<input type="${3}" class="form-control" id="$1" placeholder="$2">
 		</div>
 		<button type="submit" class="btn btn-default">${4:Submit}</button>
@@ -184,13 +184,31 @@ snippet form-horizontal (bootstrap3)
 		</div>
 	</form>
 
-snippet form-group (bootstrap3)
+snippet fg (bootstrap3)
 	<div class="form-group">
 		${1}
 	</div>
 
-snippet input (bootstrap3)
-	<input type="text" class="form-control" name="${1}" value="${2}" placeholder="$1">
+snippet inline_input (bootstrap3)
+	<div class="form-group form-inline">
+		<label for="${1:id}">${2:Label Title}</label>
+		<input type="text" class="form-control" name="$1" placeholder="$2">
+	</div>
+
+snippet inline_select (bootstrap3)
+	<div class="form-group form-inline">
+		<label for="${1:id}">${2:Label Title}</label>
+		<select class="form-control" name="$1">
+			<option>${3}</option>
+		</select>
+	</div>
+
+snippet input_label (bootstrap3)
+	<label for="${1:id}">${2:Label Title}</label>
+	<input type="text" class="form-control" name="$1" placeholder="$2">
+
+snippet inp (bootstrap3)
+	<input type="text" class="form-control" name="${1}" value="${2}" placeholder="${3:$1}">
 
 snippet textarea (bootstrap3)
 	<textarea class="form-control" name="${1}" rows="${2}" cols="${3}">${4}</textarea>
